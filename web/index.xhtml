@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Calculadora JSF</title>
+
+    </h:head>
+    <h:body>
+        <h:outputStylesheet library="css" name="estilo.css"  />
+        <div id="registro">
+            <span class="nuevoRegistro">Calculadora JSF</span>
+            <h:form>
+                <table>
+                    <tr>
+                        <td><span class="datosUsuario">Valor 1</span></td>
+                        <td><h:inputText class="campos" value="#{controle.negocio.numero1}" required="true"/></td>
+                    </tr>
+                    <tr>
+                        <td><span class="datosUsuario">valor 2</span></td>
+                        <td><h:inputText class="campos" value="#{controle.negocio.numero2}" required="true"/></td>
+                    </tr>
+                    <tr>
+                        <td><span class="datosUsuario">Resultado</span></td>
+                        <td><h:inputText class="campos" value="#{controle.negocio.resultado}" readonly="true"/></td>
+                    </tr>
+                    <tr>
+                        <td><h:commandButton class="botonAzul" value="Somar"
+                                             action="#{controle.somar()}"/></td>
+                        <td><h:commandButton class="botonAzul" value="Subtrair"
+                                             action="#{controle.subtrair()}"/></td>
+                    </tr>
+                    <tr>
+                        <td><h:commandButton class="botonAzul" value="Multiplicar"
+                                             action="#{controle.multiplicar()}"/></td>
+                        <td><h:commandButton class="botonAzul" value="Dividir"
+                                             action="#{controle.dividir()}"/></td>
+                    </tr>
+                </table>
+            </h:form>
+        </div>
+    </h:body>
+</html>
